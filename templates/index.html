@@ -9,13 +9,13 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}" />
   </head>
-  <body class="bg-dark">
+  <body>
     <div class="container">
       <!-- Add Jumbotron to Header -->
-      <div class="jumbotron text-center" style="background-image: url({{ url_for('static', filename='mars-rover.jpg') }})>
-        <h1>Mission to Mars</h1>
-        <img src="{{ url_for('static', filename='mars-rover.jpg')}} alt="...">
+      <div class="jumbotron text-center">
+        <u> <h1>Mission to Mars</h1> </u>
         <!-- Add a button to activate scraping script -->
         <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
       </div>
@@ -24,7 +24,7 @@
         <div class="col-md-12">
           <div class="media">
             <div class="media-body">
-              <h2>Latest Mars News</h2>
+              <u> <h2>Latest Mars News</h2> </u>
               <h4 class="media-heading">{{ mars.news_title }}</h4>
               <p>{{ mars.news_paragraph }}</p>
             </div>
@@ -35,7 +35,7 @@
       <!-- Section for Featured Image and Facts table -->
       <div class="row" id="mars-featured-image">
         <div class="col-md-8">
-          <h2>Featured Mars Image</h2>
+          <u> <h2>Featured Mars Image</h2> </u> 
           <img
             src="{{mars.featured_image }}"
             class="img-responsive"
@@ -45,8 +45,8 @@
         <div class="col-md-4">
           <!-- Mars Facts -->
           <div class="row" id="mars-facts">
-            <h4>Mars Facts</h4>
-            <table clss="table table-bordered">{{ mars.facts | safe }}</table>
+            <u> <h3>Mars Facts</h3> </u>
+            <table clss="table table-striped">{{ mars.facts | safe }}</table>
           </div>
         </div>
       </div>
@@ -55,11 +55,11 @@
 
       </div class="row" id="mars-hemispheres>/h2>
         </div class="page-header">
-          <h2 class="text-center">Mars Hemisphere</h2>
+          <u> <h2 class="text-center">Mars Hemisphere</h2> </u>
         </div>
 
         {% for hemisphere in mars.hemisphere %}
-        <div class="col-md-6">
+        <div class="col-md-3">
           <div class="thumbnail">
             <img src="{{hemisphere.img_url | default('static/images/error.png', true)}}" alt="...">
             <div class="captain">

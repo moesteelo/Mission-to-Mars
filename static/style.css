@@ -1,0 +1,8 @@
+
+  .jumbotron {
+    background-image: url("Mars city.jpg");
+    mix-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+  }
