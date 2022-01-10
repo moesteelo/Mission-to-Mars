@@ -13,14 +13,14 @@ Mission to Mars is a project that uses HTML Webscraping in a python script that 
 
 
 ## Results 
-The final product was a fully-functional Flask web application created that inlcudes images, a fact table with information comparing Mars and Earth, and the latest articles and a short description scarped from NASA's website. With the "Scrape New Data" button we can rest assured that every time we click this button, we will always have the lastest information regarding Mars and its future. :telescope:
+The final product was a fully-functional Flask web application created that inlcudes images, a fact table with information comparing Mars and Earth, and the latest articles and a short description scarped from NASA's website. With the "Scrape New Data" button we can rest assured that every time we click this button, we will always have the lastest information regarding Mars and it's future. :telescope:
 
 ## Code files:
 App script: app.py
 
 HTML code: index.html
 
-Scarping script:py
+Scarping: script:py
 
 CSS Images: static folder
 
